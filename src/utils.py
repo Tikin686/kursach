@@ -35,3 +35,13 @@ def formation_card(transfer):
     number_card = transfer.split(" ")[-1]
     number_card = number_card[:4] + " " + number_card[4:6] + "** **** " + number_card[-4:]
     return  number_card
+
+
+def formation_account(transfer):
+    """
+    Скрытие номера счёта
+    """
+    number_account = transfer.split(" ")[-1]
+    number_account = "**" + number_account[-4:]
+    return number_account
+
