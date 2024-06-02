@@ -28,4 +28,10 @@ def formation_data(date):
     return operation
 
 
-
+def formation_card(transfer):
+    """
+    Скрытие номера карты
+    """
+    number_card = transfer.split(" ")[-1]
+    number_card = number_card[:4] + " " + number_card[4:6] + "** **** " + number_card[-4:]
+    return  number_card
