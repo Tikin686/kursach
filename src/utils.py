@@ -45,3 +45,10 @@ def formation_account(transfer):
     number_account = "**" + number_account[-4:]
     return number_account
 
+
+def name_transfer(transfer):
+    """
+    Название перевода
+    """
+    return " ".join(transfer.split(" ")[:-1])
+
