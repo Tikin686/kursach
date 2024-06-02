@@ -1,4 +1,4 @@
-from src.utils import formation_data, formation_card, formation_account
+from src.utils import formation_data, formation_card, formation_account, name_transfer
 
 
 def test_formation_data():
@@ -11,3 +11,8 @@ def test_formation_card():
 
 def test_formation_account():
     assert formation_account("Счет 64686473678894779589") == "**9589"
+
+
+def test_name_transfer():
+    assert name_transfer("Счет 64686473678894779589") == "Счет"
+    assert name_transfer("Visa Classic 6831982476737658") == "Visa Classic"
